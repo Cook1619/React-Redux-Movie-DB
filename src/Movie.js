@@ -1,5 +1,6 @@
 import React from "react";
 import Proptypes from "prop-types";
+import { Link } from "react-router-dom";
 
 // export default class Movie extends Component {
 //   static propTypes = {
@@ -24,7 +25,9 @@ const POSTER_PATH = "http://image.tmdb.org/t/p/w154";
 
 const Movie = ({ movie }) => (
   <div>
-    <img src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
+    <Link to={`/${movie.id}`}>
+      <img src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
+    </Link>
   </div>
 );
 
