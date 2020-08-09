@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Movie from "./Movie";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const movies = [
+  {
+    id: 1,
+    title: "Star Wars",
+  },
+  {
+    id: 2,
+    title: "300",
+  },
+  {
+    id: 3,
+    title: "Grimm",
+  },
+];
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">Movie Database</header>
+        {movies.map((movie) => (
+          <Movie title={movie.title} key={movie.id} />
+        ))}
+      </div>
+    );
+  }
 }
 
 export default App;
