@@ -1,26 +1,7 @@
 import React from "react";
 import Proptypes from "prop-types";
-import styled from "styled-components";
+import { Poster } from "./Styled-Components/Styled-Components";
 import { Link } from "react-router-dom";
-
-// export default class Movie extends Component {
-//   static propTypes = {
-//     movie: Proptypes.shape({
-//       title: Proptypes.string.isRequired,
-//       overview: Proptypes.string.isRequired,
-//     }),
-//   };
-//   render() {
-//     const { title, overview } = this.props.movie;
-
-//     return (
-//       <div>
-//         <h3>{title}</h3>
-//         <p>{overview}</p>
-//       </div>
-//     );
-//   }
-// }
 
 const POSTER_PATH = "http://image.tmdb.org/t/p/w154";
 
@@ -37,7 +18,3 @@ Movie.propTypes = {
     title: Proptypes.string.isRequired,
   }).isRequired,
 };
-
-export const Poster = styled.img`
-  box-shadow: 0 0 35px black;
-`;
