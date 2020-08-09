@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Movie from "./Movie";
 import "./App.css";
 
@@ -25,14 +26,21 @@ class App extends Component {
   render() {
     const { movies } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">Movie Database</header>
-        {movies.map((movie) => (
-          <Movie movie={movie} key={movie.id} />
-        ))}
-      </div>
+      <Router>
+        <div className="App">
+          <header className="App-header">Movie Database</header>
+          <Route path="/test" component={test} />
+          {movies.map((movie) => (
+            <Movie movie={movie} key={movie.id} />
+          ))}
+        </div>
+      </Router>
     );
   }
 }
+
+const test = () => {
+  return <h1>test</h1>;
+};
 
 export default App;
