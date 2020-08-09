@@ -6,10 +6,14 @@ const movies = [
   {
     id: 1,
     title: "Star Wars",
+    desc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, obcaecati.",
   },
   {
     id: 2,
     title: "300",
+    desc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, obcaecati.",
   },
   {
     id: 3,
@@ -23,7 +27,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">Movie Database</header>
         {movies.map((movie) => (
-          <Movie title={movie.title} key={movie.id} />
+          <Movie movie={movie} key={movie.id} desc={movie.desc} />
         ))}
       </div>
     );
