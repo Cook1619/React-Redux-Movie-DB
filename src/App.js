@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import MoviesList from "./MoviesList";
-import Movie from "./Movie";
+import MovieDetails from "./MovieDetails";
 import "./App.css";
 
 const App = () => (
@@ -12,7 +12,7 @@ const App = () => (
       </header>
       <Switch>
         <Route exact path="/" component={MoviesList} />
-        <Route path="/:id" component={Movie} />
+        <Route path="/:id" component={MovieDetails} />
       </Switch>
     </div>
   </Router>
